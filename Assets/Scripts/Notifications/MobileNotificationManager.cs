@@ -1,4 +1,4 @@
-    using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -54,5 +54,9 @@ public class MobileNotificationManager : MonoBehaviour
     {
         
     }
+<<<<<<< Updated upstream
 #endif
+=======
+
+>>>>>>> Stashed changes
 }
