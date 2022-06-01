@@ -29,8 +29,8 @@ public class MobileNotificationManager : MonoBehaviour
         {
             Title = "Test Notification!",
             Text = "This is a test notification!",
-            SmallIcon = "default",
-            LargeIcon = "default",
+            SmallIcon = "app_icon_small",
+            LargeIcon = "app_icon_large",
             FireTime = System.DateTime.Now.AddSeconds(10),
         };
 
@@ -54,4 +54,5 @@ public class MobileNotificationManager : MonoBehaviour
     {
         
     }
+#endif
 }
