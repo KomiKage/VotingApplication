@@ -45,6 +45,8 @@ public class MobileNotificationManager : MonoBehaviour
             msg += "\n .Channel: " + data.Channel;
             Debug.Log(msg);
         };
+
+        AndroidNotificationCenter.OnNotificationReceived.GetLastNotificationIntent();
     }
 
     // Update is called once per frame
