@@ -28,7 +28,7 @@ public class MobileNotificationManager : MonoBehaviour
         AndroidNotification notification = new AndroidNotification()
         {
             Title = "Test Notification!",
-            Text = "This is a test notification!",
+            Text = "You had the game open for 10 seconds!",
             SmallIcon = "app_icon_small",
             LargeIcon = "app_icon_large",
             FireTime = System.DateTime.Now.AddSeconds(10),
@@ -61,11 +61,11 @@ public class MobileNotificationManager : MonoBehaviour
     {
         if (AndroidNotificationCenter.CheckScheduledNotificationStatus(identifier) == NotificationStatus.Scheduled)
         {
-            // If the player had left the game and the game is not running. Send them a new notification
+            // If the player had left the game and the game is still running. Send them a new notification
             AndroidNotification newNotification = new AndroidNotification()
             {
                 Title = "Reminder Notification!",
-                Text = "You've paused our tracking app!",
+                Text = "You just paused our app, we won't remind you again so watch out!",
                 SmallIcon = "app_icon_small",
                 LargeIcon = "app_icon_large",
                 FireTime = System.DateTime.Now
@@ -79,11 +79,12 @@ public class MobileNotificationManager : MonoBehaviour
             // Remove the notification from the status bar
             AndroidNotificationCenter.CancelNotification(identifier);
         }
-        else if (AndroidNotificationCenter.CheckScheduledNotificationStatus(identifier) == NotificationStatus.Unknown)
+
+        /*else if (AndroidNotificationCenter.CheckScheduledNotificationStatus(identifier) == NotificationStatus.Unknown)
         {
-            AndroidNotification notification = new AndroidNotification()
+            AndroidNotification notification2 = new AndroidNotification()
             {
-                Title = "Test Notification!",
+                Title = "Test Notification 2!",
                 Text = "This is a test notification!",
                 SmallIcon = "app_icon_small",
                 LargeIcon = "app_icon_large",
@@ -91,8 +92,8 @@ public class MobileNotificationManager : MonoBehaviour
             };
 
             // Try sending it again
-            identifier = AndroidNotificationCenter.SendNotification(notification, "default_channel");
-        }
+            identifier = AndroidNotificationCenter.SendNotification(notification2, "default_channel");
+        }*/
     }
 
 #endif
