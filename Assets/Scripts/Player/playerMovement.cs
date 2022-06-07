@@ -8,7 +8,7 @@ public class playerMovement : MonoBehaviour
     public float playerSpeed = 5.0f;
 
     public Rigidbody2D playerRigidbody;
-    public PlayerInput playerInput;
+    public Playerinput playerInput;
     private Vector2 _input;
 
     private void Start()
