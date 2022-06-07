@@ -18,11 +18,11 @@ public class playerMovement : MonoBehaviour
         {
             Debug.LogError("Player is missing a Rigidbody2D component");
         }
-
         playerInput = GetComponent<PlayerInput>();
     }
     private void Update()
     {
+
         _input = playerInput.actions["Move"].ReadValue<Vector2>();
         MovePlayer();
     }
