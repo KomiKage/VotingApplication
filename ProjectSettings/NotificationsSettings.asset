@@ -4,7 +4,7 @@
         "m_EditorHideFlags": 0,
         "m_Name": "",
         "m_EditorClassIdentifier": "",
-        "ToolbarIndex": 1,
+        "ToolbarIndex": 0,
         "m_iOSNotificationSettingsValues": {
             "m_Keys": [
                 "UnityNotificationRequestAuthorizationOnAppLaunch",
@@ -43,7 +43,7 @@
                 "Type": 0,
                 "Asset": {
                     "fileID": 2800000,
-                    "guid": "b38e246cf603ac440bb2bec34b2e37b0",
+                    "guid": "dd27888e20d34434fac8c234f0bf472c",
                     "type": 3
                 }
             },
