@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class playerMovement : MonoBehaviour
+public class playerMovementTestBrom : MonoBehaviour
 {
     public float playerSpeed = 5.0f;
 
