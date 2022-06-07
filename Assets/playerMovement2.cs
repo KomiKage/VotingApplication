@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerMovement : MonoBehaviour
+public class playerMovement2 : MonoBehaviour
 {
     //CODE FOR PC CONTROL
     public float moveSpeed = 5f;
