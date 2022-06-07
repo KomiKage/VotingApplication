@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class playerMovementTestBrom : MonoBehaviour
+public class PlayerMovementTestBrom : MonoBehaviour
 {
-    public float playerSpeed = 5.0f;
 
+    public float playerSpeed = 5.0f;
     public Rigidbody2D playerRigidbody;
     public PlayerInput playerInput;
     private Vector2 _input;
 
     private void Start()
     {
+
         playerRigidbody = GetComponent<Rigidbody2D>();
         if (playerRigidbody == null)
         {
@@ -22,7 +23,7 @@ public class playerMovementTestBrom : MonoBehaviour
     }
     private void Update()
     {
-
+        
         _input = playerInput.actions["Move"].ReadValue<Vector2>();
         MovePlayer();
     }
