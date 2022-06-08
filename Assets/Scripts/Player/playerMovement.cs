@@ -7,9 +7,11 @@ public class playerMovement : MonoBehaviour
 {
     public float playerSpeed = 5.0f;
 
-    public Rigidbody2D playerRigidbody;
-    public PlayerInput playerInput;
+    private Rigidbody2D playerRigidbody;
+    private PlayerInput playerInput;
     private Vector2 _input;
+
+    public MobileNotificationManager notificationScript;
 
     private void Start()
     {
@@ -33,4 +35,11 @@ public class playerMovement : MonoBehaviour
         playerRigidbody.velocity = new Vector2(_input.x * playerSpeed, _input.y * playerSpeed);
     }
 
+   /* private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "NotifBlock")
+        {
+            notificationScript.NotificationBlock();
+        }
+    }*/
 }
