@@ -23,15 +23,24 @@ public class PlayerMovementTestBrom : MonoBehaviour
     }
     private void Update()
     {
-        
+
         _input = playerInput.actions["Move"].ReadValue<Vector2>();
         MovePlayer();
+
+
     }
 
     private void MovePlayer()
     {
-        //playerRigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * playerSpeed, Input.GetAxisRaw("Vertical") * playerSpeed);
-        playerRigidbody.velocity = new Vector2(_input.x * playerSpeed, _input.y * playerSpeed);
+        
+        playerRigidbody.velocity = new Vector2(JoystickMovement.input.x * playerSpeed, JoystickMovement.input.y * playerSpeed);
     }
+
+
+
+
+
+
+
 
 }
