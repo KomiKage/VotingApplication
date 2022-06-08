@@ -12,6 +12,7 @@ public class playerMovement : MonoBehaviour
     private Vector2 _input;
 
     public MobileNotificationManager notificationScript;
+    public PopupWindow popupScript;
 
     private void Start()
     {
@@ -35,11 +36,12 @@ public class playerMovement : MonoBehaviour
         playerRigidbody.velocity = new Vector2(_input.x * playerSpeed, _input.y * playerSpeed);
     }
 
-   /* private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "NotifBlock")
         {
             notificationScript.NotificationBlock();
+            popupScript.AddToQueue("Block touched");
         }
-    }*/
+    }
 }
