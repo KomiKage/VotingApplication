@@ -5,15 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Map.unity
-    guid: 28e97cbf0ebed24449db31f53c063ed4
+    path: Assets/Scenes/Jochem.unity
+    guid: ea3190cdafbe32b45a1a309e56ded719
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 0765e99da9d0c804697e6da0d1321e28, type: 2}
     com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000, guid: e20337b83ee11ad4fae6ba6b74dc07b7, type: 2}
