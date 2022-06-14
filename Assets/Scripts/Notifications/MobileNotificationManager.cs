@@ -25,7 +25,7 @@ public class MobileNotificationManager : MonoBehaviour
 
         AndroidNotificationCenter.RegisterNotificationChannel(defaultNotificationChannel);
 
-        AndroidNotification notification = new AndroidNotification()
+        /*AndroidNotification notification = new AndroidNotification()
         {
             Title = "Test Notification!",
             Text = "You had the game open for 10 seconds!",
@@ -34,7 +34,7 @@ public class MobileNotificationManager : MonoBehaviour
             FireTime = System.DateTime.Now.AddSeconds(10),
         };
 
-        // identifier = AndroidNotificationCenter.SendNotification(notification, "default_channel");
+        identifier = AndroidNotificationCenter.SendNotification(notification, "default_channel");*/
 
         AndroidNotificationCenter.NotificationReceivedCallback receivedNotificationHandler = delegate (AndroidNotificationIntentData data)
         {
