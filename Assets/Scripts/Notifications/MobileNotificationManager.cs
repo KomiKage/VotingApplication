@@ -25,7 +25,7 @@ public class MobileNotificationManager : MonoBehaviour
 
         AndroidNotificationCenter.RegisterNotificationChannel(defaultNotificationChannel);
 
-        AndroidNotification notification = new AndroidNotification()
+        /*AndroidNotification notification = new AndroidNotification()
         {
             Title = "Test Notification!",
             Text = "You had the game open for 10 seconds!",
@@ -34,7 +34,7 @@ public class MobileNotificationManager : MonoBehaviour
             FireTime = System.DateTime.Now.AddSeconds(10),
         };
 
-        identifier = AndroidNotificationCenter.SendNotification(notification, "default_channel");
+        identifier = AndroidNotificationCenter.SendNotification(notification, "default_channel");*/
 
         AndroidNotificationCenter.NotificationReceivedCallback receivedNotificationHandler = delegate (AndroidNotificationIntentData data)
         {
@@ -55,6 +55,20 @@ public class MobileNotificationManager : MonoBehaviour
             Debug.Log("App was opened with notification!");
         }
 
+    }
+
+    public void NotificationBlock()
+    {
+        AndroidNotification newNotification = new AndroidNotification()
+        {
+            Title = "You touched the block!",
+            Text = "Other than that nothing happened!",
+            SmallIcon = "app_icon_small",
+            LargeIcon = "app_icon_large",
+            FireTime = System.DateTime.Now
+        };
+
+        identifier = AndroidNotificationCenter.SendNotification(newNotification, "default_channel");
     }
 
     private void OnApplicationPause(bool pause)
