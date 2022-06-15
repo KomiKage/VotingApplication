@@ -61,8 +61,8 @@ public class MobileNotificationManager : MonoBehaviour
     {
         AndroidNotification newNotification = new AndroidNotification()
         {
-            Title = "You touched the block!",
-            Text = "Other than that nothing happened!",
+            Title = "Brom is legend!",
+            Text = "Other than that Loek toe!" + " jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa ",
             SmallIcon = "app_icon_small",
             LargeIcon = "app_icon_large",
             FireTime = System.DateTime.Now

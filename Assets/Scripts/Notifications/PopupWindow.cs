@@ -7,7 +7,7 @@ public class PopupWindow : MonoBehaviour
 {
     public TMP_Text popupText;
 
-    private GameObject window;
+    public static GameObject window;
     private Animator popupAnimator;
 
     private Queue<string> popupQueue; //make it different type for more detailed popups, you can add different types, titles, descriptions etc
@@ -16,7 +16,7 @@ public class PopupWindow : MonoBehaviour
     private void Start() {
         window = transform.GetChild(0).gameObject;
         popupAnimator = window.GetComponent<Animator>();
-        window.SetActive(false);
+        window.SetActive(false);    
         popupQueue = new Queue<string>();
     }
 
@@ -30,6 +30,10 @@ public class PopupWindow : MonoBehaviour
         window.SetActive(true);
         popupText.text = text;
         popupAnimator.Play("PopupAnimation");
+    }
+    public void Dequeue()
+    {
+
     }
 
     private IEnumerator CheckQueue() {

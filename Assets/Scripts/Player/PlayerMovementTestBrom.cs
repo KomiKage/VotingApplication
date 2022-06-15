@@ -11,6 +11,9 @@ public class PlayerMovementTestBrom : MonoBehaviour
     public PlayerInput playerInput;
     private Vector2 _input;
 
+    public MobileNotificationManager notificationScript;
+    public PopupWindow popupScript;
+
     private void Start()
     {
 
@@ -36,7 +39,21 @@ public class PlayerMovementTestBrom : MonoBehaviour
         playerRigidbody.velocity = new Vector2(JoystickMovement.input.x * playerSpeed, JoystickMovement.input.y * playerSpeed);
     }
 
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Shop")
+        {
+            notificationScript.NotificationBlock();
+            popupScript.AddToQueue("Store reached");
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Shop")
+        {
+            PopupWindow.window.gameObject.SetActive(false);
+        }
+    }
 
 
 
