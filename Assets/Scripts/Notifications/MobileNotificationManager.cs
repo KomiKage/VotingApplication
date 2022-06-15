@@ -62,7 +62,7 @@ public class MobileNotificationManager : MonoBehaviour
         AndroidNotification newNotification = new AndroidNotification()
         {
             Title = "Brom is legend!",
-            Text = "Other than that Loek toe!" + " jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa jeaaaaaaaa ",
+            Text = "Other than that Loek toe!",
             SmallIcon = "app_icon_small",
             LargeIcon = "app_icon_large",
             FireTime = System.DateTime.Now
