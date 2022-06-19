@@ -5,7 +5,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovementTestBrom : MonoBehaviour
 {
-
     public float playerSpeed = 5.0f;
     public Rigidbody2D playerRigidbody;
     public PlayerInput playerInput;
@@ -27,10 +26,12 @@ public class PlayerMovementTestBrom : MonoBehaviour
     private void Update()
     {
 
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 direction = mousePosition - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         _input = playerInput.actions["Move"].ReadValue<Vector2>();
         MovePlayer();
-
-
     }
 
     private void MovePlayer()
@@ -44,20 +45,15 @@ public class PlayerMovementTestBrom : MonoBehaviour
         if (collision.tag == "Shop")
         {
             notificationScript.NotificationBlock();
-            popupScript.AddToQueue("Store reached");
+            popupScript.AddToQueue("Local store reached");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Shop")
         {
-            PopupWindow.window.gameObject.SetActive(false);
+            PopupWindow.window.SetActive(false);
+            Debug.Log("1 werkt");
         }
     }
-
-
-
-
-
-
 }
