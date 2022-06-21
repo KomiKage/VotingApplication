@@ -42,18 +42,20 @@ public class PlayerMovementTestBrom : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Shop")
+        if (collision.CompareTag("Shop"))
         {
+            PopupWindow.window.SetActive(true);
             notificationScript.NotificationBlock();
             popupScript.AddToQueue("Local store reached");
+            Debug.Log("1 werkt");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Shop")
+        if (collision.CompareTag("Shop"))
         {
             PopupWindow.window.SetActive(false);
-            Debug.Log("1 werkt");
+            Debug.Log("2werkt");
         }
     }
 }
