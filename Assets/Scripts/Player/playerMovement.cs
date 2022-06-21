@@ -11,6 +11,8 @@ public class playerMovement : MonoBehaviour
     private PlayerInput playerInput;
     private Vector2 _input;
 
+    public Joystick joystick;
+
     public MobileNotificationManager notificationScript;
     public PopupWindow popupScript;
 
@@ -28,6 +30,12 @@ public class playerMovement : MonoBehaviour
 
         _input = playerInput.actions["Move"].ReadValue<Vector2>();
         MovePlayer();
+
+        /*Vector3 moveVector = (Vector3.up * joystick.Vertical - Vector3.left * joystick.Horizontal);
+        if (joystick.Horizontal != 0 || joystick.Vertical != 0)
+        {
+            transform.rotation = Quaternion.LookRotation(Vector3.forward, moveVector);
+        }*/
     }
 
     private void MovePlayer()
