@@ -219,10 +219,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 63212525}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0da766efeb9a79e4e81ec6aeaa15923d, type: 3}
+  m_Script: {fileID: 11500000, guid: 8427feb1d0406294e914d3621ad5b24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 2.5
+  playerSpeed: 5
   notificationScript: {fileID: 1145668186}
   popupScript: {fileID: 2043880997}
 --- !u!1 &213861027
