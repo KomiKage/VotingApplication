@@ -197,10 +197,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1338868556808955482}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0da766efeb9a79e4e81ec6aeaa15923d, type: 3}
+  m_Script: {fileID: 11500000, guid: 8427feb1d0406294e914d3621ad5b24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 2.5
+  playerSpeed: 5
   notificationScript: {fileID: 0}
   popupScript: {fileID: 0}
 --- !u!50 &1338868556808955486

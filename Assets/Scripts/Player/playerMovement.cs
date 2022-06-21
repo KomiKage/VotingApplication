@@ -14,8 +14,6 @@ public class playerMovement : MonoBehaviour
     public MobileNotificationManager notificationScript;
     public PopupWindow popupScript;
 
-
-
     private void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
@@ -30,10 +28,6 @@ public class playerMovement : MonoBehaviour
 
         _input = playerInput.actions["Move"].ReadValue<Vector2>();
         MovePlayer();
-
-        //This rotating no work
-        /*Quaternion targetRotation = Quaternion.LookRotation(_input);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime);*/
     }
 
     private void MovePlayer()
