@@ -315,7 +315,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 420348642}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e29653ae9009d94cb75f28c1b711070, type: 3}
+  m_Script: {fileID: 11500000, guid: 2be14860bdab6424680df95f149b4a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   popupText: {fileID: 1432504267}
@@ -420,8 +420,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 5
-  notificationScript: {fileID: 311394287}
-  popupScript: {fileID: 420348643}
 --- !u!212 &425081865
 SpriteRenderer:
   m_ObjectHideFlags: 0

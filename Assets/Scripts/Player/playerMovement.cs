@@ -1,5 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.Collections; 
+using System.Collections.Generic; 
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +13,9 @@ public class playerMovement : MonoBehaviour
 
     public MobileNotificationManager notificationScript;
     public PopupWindow popupScript;
+
+    Vector3 relativePos = target.position - transform.position;
+    Quaternion targetRotation = Quaternion.LookRotation(relativePos);
 
     private void Start()
     {
@@ -28,6 +31,8 @@ public class playerMovement : MonoBehaviour
 
         _input = playerInput.actions["Move"].ReadValue<Vector2>();
         MovePlayer();
+
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, Time.deltaTime);
     }
 
     private void MovePlayer()
