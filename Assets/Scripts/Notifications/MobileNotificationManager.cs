@@ -61,8 +61,8 @@ public class MobileNotificationManager : MonoBehaviour
     {
         AndroidNotification newNotification = new AndroidNotification()
         {
-            Title = "Brom is legend!",
-            Text = "Other than that Loek toe!",
+            Title = "Notification!",
+            Text = "You walked past a local store!",
             SmallIcon = "app_icon_small",
             LargeIcon = "app_icon_large",
             FireTime = System.DateTime.Now
@@ -79,7 +79,7 @@ public class MobileNotificationManager : MonoBehaviour
             AndroidNotification newNotification = new AndroidNotification()
             {
                 Title = "Reminder Notification!",
-                Text = "You just paused our app, we won't remind you again so watch out!",
+                Text = "You just paused our app, we will be reminding you again :D",
                 SmallIcon = "app_icon_small",
                 LargeIcon = "app_icon_large",
                 FireTime = System.DateTime.Now
