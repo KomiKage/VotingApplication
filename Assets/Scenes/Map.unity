@@ -752,6 +752,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1726950274 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1338868556459208819, guid: 7ed18cae3ca5492419bf3650b1850a52, type: 3}
+  m_PrefabInstance: {fileID: 1988253541}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1726950279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1726950274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41858aa1b2bfe8944bdd62525808a452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zoomOutMin: 1
+  zoomOutMax: 8
 --- !u!1 &1947675844
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,6 +990,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1338868556459208821, guid: 7ed18cae3ca5492419bf3650b1850a52, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.46620533
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338868556459208821, guid: 7ed18cae3ca5492419bf3650b1850a52, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.5849056
+      objectReference: {fileID: 0}
+    - target: {fileID: 1338868556459208821, guid: 7ed18cae3ca5492419bf3650b1850a52, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.20637235
+      objectReference: {fileID: 0}
     - target: {fileID: 1338868556808955482, guid: 7ed18cae3ca5492419bf3650b1850a52, type: 3}
       propertyPath: m_Name
       value: PlayerV1
@@ -1019,7 +1050,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1338868556808955485, guid: 7ed18cae3ca5492419bf3650b1850a52, type: 3}
+      propertyPath: popupScript
+      value: 
+      objectReference: {fileID: 2043880997}
+    - target: {fileID: 1338868556808955485, guid: 7ed18cae3ca5492419bf3650b1850a52, type: 3}
+      propertyPath: notificationScript
+      value: 
+      objectReference: {fileID: 1145668186}
+    m_RemovedComponents:
+    - {fileID: 1338868556459208823, guid: 7ed18cae3ca5492419bf3650b1850a52, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7ed18cae3ca5492419bf3650b1850a52, type: 3}
 --- !u!1 &2043880996
 GameObject:
@@ -1047,9 +1087,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2043880996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2be14860bdab6424680df95f149b4a15, type: 3}
+  m_Script: {fileID: 11500000, guid: d9e47cefc0ec0a54cab430053acc8b4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popupText: {fileID: 0}
 --- !u!4 &2043880998
 Transform:
   m_ObjectHideFlags: 0
