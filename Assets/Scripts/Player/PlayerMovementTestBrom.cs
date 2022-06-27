@@ -25,11 +25,6 @@ public class PlayerMovementTestBrom : MonoBehaviour
     }
     private void Update()
     {
-
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 direction = mousePosition - transform.position;
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         _input = playerInput.actions["Move"].ReadValue<Vector2>();
         MovePlayer();
     }
@@ -44,18 +39,18 @@ public class PlayerMovementTestBrom : MonoBehaviour
     {
         if (collision.CompareTag("Shop"))
         {
-            //PopupWindow.window.SetActive(true);
+            PopupWindow.window.SetActive(true);
             notificationScript.NotificationBlock();
             popupScript.AddToQueue("Local store reached");
             Debug.Log("1 werkt");
         }
     }
-    /*private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Shop"))
         {
             PopupWindow.window.SetActive(false);
             Debug.Log("2werkt");
         }
-    }*/
+    }
 }
